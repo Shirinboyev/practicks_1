@@ -1,19 +1,104 @@
+// // void main(){
+// //   int ans = 0;
+// // String s = '193451*298569039030';
+// // print(s.substring(0,s.indexOf('*')));
+// // print(s.indexOf('*'));
+// // print(s.substring(s.indexOf('*')+1));
+
+// // }
+// import 'package:flutter/material.dart';
+// void main(){
+//   runApp(MyApp());
+// }
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner:false ,
+//       home: Scaffold(body: 
+//       Padding(
+//         padding: const EdgeInsets.all(20),
+//         child: ListView(
+//           children: [
+//           Padding(
+//             padding: const EdgeInsets.only(top: 20,bottom: 20),
+//             child: ListTile(
+//               leading: CircleAvatar(backgroundImage: AssetImage('images/chicken.png'),),
+//               title: Text('Chicken'),
+//               subtitle: Text('⨀ 15 min ⨀ 3 ʬ 715 kcal'),
+//               trailing: IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right_outlined)),
+//             ),
+//           ),  ListTile(
+//             leading: CircleAvatar(backgroundImage: AssetImage('images/barak.png'),),
+//             title: Text('Chicken'),
+//             subtitle: Text('⨀ 15 min ⨀ 3 ʬ 715 kcal'),
+//             trailing: IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right_outlined)),
+//           ),  Padding(
+//             padding: const EdgeInsets.only(top: 20,bottom: 20),
+//             child: ListTile(
+//               leading: CircleAvatar(backgroundImage: AssetImage('images/fast food.png'),),
+//               title: Text('Chicken'),
+//               subtitle: Text('⨀ 15 min ⨀ 3 ʬ 715 kcal'),
+//               trailing: IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right_outlined)),
+//             ),
+//           ),  ListTile(
+//             leading: CircleAvatar(backgroundImage: AssetImage('images/lagmon.png'),),
+//             title: Text('Chicken'),
+//             subtitle: Text('⨀ 15 min ⨀ 3 ʬ 715 kcal'),
+//             trailing: IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right_outlined)),
+//           ),  Padding(
+//             padding: const EdgeInsets.only(top: 20,bottom: 20),
+//             child: ListTile(
+//               leading: CircleAvatar(backgroundImage: AssetImage('images/pizza.png'),),
+//               title: Text('Chicken'),
+//               subtitle: Text('⨀ 15 min ⨀ 3 ʬ 715 kcal'),
+//               trailing: IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right_outlined)),
+//             ),
+//           ),ListTile(
+//               leading: CircleAvatar(backgroundImage: AssetImage('images/samsa.png'),),
+//               title: Text('Chicken'),
+//               subtitle: Text('⨀ 15 min ⨀ 3 ʬ 715 kcal'),
+//               trailing: IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right_outlined)),
+//             ),
+//         ],),
+//       )
+//       ),
+//     );
+//   }
+// }
+import 'package:flutter/material.dart';
 void main(){
-  String s = '1921*2930-12678931+1278/343-544+2452'; 
-  List a  = [];
-  List f  = [];
-  int ans = 0;
-  for (int i = 0; i<s.length;i++){
-    if(s[i] == '-'|| s[i] =='+' || s[i] =='*' || s[i] =='/'){
-      a.add(s[i]);
-    }
-      }
-       for (int d = 0; d<s.length;d++){
-    if(s[d] == '1'|| s[d] =='2' || s[d] =='3' || s[d] =='4' || s[d] == '5'|| s[d] =='6' || s[d] =='7' || s[d] =='8' || s[d] == '9'|| s[d] == '0'){
-      f.add(s[d]);
-      // 356377065634307
-   }
-      }
-  print(a);
-  print(f);
+  runApp(MyApp());
+}
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Widget lst (){
+    return ListView.builder(itemBuilder: (context, index) => ListTile(
+              leading: CircleAvatar(backgroundImage: AssetImage('images/samsa.png'),),
+              title: Text('Chicken'),
+              subtitle: Text('⨀ 15 min ⨀ 3 ʬ 715 kcal'),
+              trailing: IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right_outlined)),
+            ),);
   }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: Scaffold(body: Column(children: [
+      lst(),
+      lst(),
+      lst()
+    ],)),);
+  }
+}
